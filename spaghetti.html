@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+               <title>Cookie Apothecary</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    </head> 
+            <header>
+            <nav>
+            <ul>
+                <li><a href="/index.html"><img src="images/logo.png" height = 100x></a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/recipies.html">Recipes</a></li>
+            </ul>
+        </nav>
+            </header>
+    <body>
+<main>
+    <section>
+        <div class = "title">
+           <h1>Spaghetti</h1>
+           <img src="images/spaghetti.png" style = "max-width: 400px; border-radius: 20px; border: 4px solid black;">
+        </div>
+    </section>
+<hr>
+<p>Spaghetti is one of Ben's favorite foods in the world! So, spaghetti is his most consistent, delicious food out of his recipe book. This will surely be one to keep in your back pocket at a moments notice!</p>
+<br>
+<p>Preperation Time: 30 Minutes</p>
+<hr>
+
+<h1 style="margin: 0 auto; text-align: center; padding-top: 20px;">Ingredients</h1>
+ <table>
+    <tr style="border: 3px, solid, black;">
+      <td style="border: 3px, solid, black;"><b>Spaghetti Noodles</b></td>
+      <td style="border: 3px, solid, black;"><b>1lb Hamburger</b></td>
+      <td style="border: 3px, solid, black;"><b>10 cups Water</b></td>
+    </tr>
+    <tr>
+      <td style="border: 3px, solid, black;"><b><a href="https://www.ragu.com/our-sauces/chunky-sauces/garden-combination-tomato-sauce/">Ragu Garden Blend Sauce</a></b></td>
+      <td style="border: 3px, solid, black;"><b>1tsp Italian Seasoning</b></td>
+      <td style="border: 3px, solid, black;"><b>1tsp Basil</b></td>
+    </tr>
+    <tr>
+        <td style="border: 3px, solid, black;"><b>1tsp Seal Salt Garlic</b></td>
+        <td style="border: 3px, solid, black;"><b>1tsp Oregano</b></td>
+        <td style="border: 3px, solid, black;"><b>1tbsp Chopped Onions</b></td>
+      </tr>
+  </table>
+
+  <hr>
+
+  <h1 style="margin: 0 auto; text-align: center; padding-top: 20px;">Directions</h1>
+  
+  <nav class = "directions">
+  <ol>
+    <li>Pour 10 cups of water into a large pot. Bring to a roiling boil. Pour spaghetti noodles into pot and stir occasionally for ~9 minutes (The time will depend upon what the pack of noodles you bought specifcially state)</li>
+    <li>While the water is boiling, heat up non-frozen meat for 3 minutes in microwave (If frozen, heat for 5), covered. After first heating, chop up the meat. Put back in microwave for 3 minutes.</li>
+    <li>Take out the meat and dump grease. Add Ragu "Garden Blend", Italian Seasoning, Oregano, Sea Salt Garlic, Basil, and Chopped Onions into meat. Heat for 2 more minutes.</li>
+    <li>By now, the meat should be finished and you're just waiting for the noodles to finish up. Once noodles are finished cooking, dump out the water using a strainer. Put the Noodles and the Sauce on the plate together, and you have yourself a delicious meal!</li>
+  </ol>
+  </nav>
+
+  <nav class="bigtext">
+    <h1>Total Cost:</h1>
+    <h1 id="cost">cost</h1>
+  </nav>
+  <script>
+    const prices = [
+  ["noodles", 1.84],
+  ["sauce", 2.24],
+  ["hamburger", 7.23],
+  ["italian", 1.08],
+  ["garlic", 17.87],
+  ["oregano", 1.08],
+  ["basil", 1.08]
+];
+const totalValue = prices.reduce((sum, item) => sum + item[1], 0);
+
+document.getElementById("cost").textContent = "~$" + totalValue;
+  </script>
+
+<footer>
+ <h3>Questions? Reach out at "benthebrownviola@gmail.com"</h3></footer>
+    </body>
+</html>

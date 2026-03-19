@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+               <title>Cookie Apothecary</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    </head> 
+            <header>
+            <nav>
+            <ul>
+                <li><a href="/index.html"><img src="images/logo.png" height = 100x></a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/recipies.html">Recipes</a></li>
+            </ul>
+        </nav>
+            </header>
+    <body>
+<main>
+    <section>
+        <div class = "title">
+           <h1>Hominy Hot Pot</h1>
+           <img src="images/hominy.jpg" style = "max-width: 400px; border-radius: 20px; border: 4px solid black;">
+        </div>
+    </section>
+<hr>
+<p>Hominy Hot Pot is a recipe created by Bush's, however it seems to have been mostly lost to time... Thankfully, Ben's family kept the recipe alive, and now it's available for your cooking and dining pleasure!</p>
+<br>
+<p>Preperation Time: 30 Minutes</p>
+<hr>
+<h1 style="margin: 0 auto; text-align: center; padding-top: 20px;">Ingredients</h1>
+ <table>
+    <tr style="border: 3px, solid, black;">
+      <td style="border: 3px, solid, black;"><b>3 Cans Hominy</b></td>
+      <td style="border: 3px, solid, black;"><b>2 Cans Diced Tomatos</b></td>
+      <td style="border: 3px, solid, black;"><b>1lb Hamburger</b></td>
+    </tr>
+    <tr>
+      <td style="border: 3px, solid, black;"><b>1 Bag Frozen Onions and Peppers.</b></td>
+      <td style="border: 3px, solid, black;"><b>1tsp Chili Powder</b></td>
+      <td style="border: 3px, solid, black;"><b>1tsp Paprika</b></td>
+    </tr>
+  </table>
+
+  <hr>
+  
+
+  <h1 style="margin: 0 auto; text-align: center; padding-top: 20px;">Directions</h1>
+  
+  <nav class = "directions">
+  <ol>
+    <li>Cook the meat till brown in a large pan. Remove any remaining grease</li>
+    <li>Drain out Hominy cans. Pour in Hominy, Onions and Pepper mix, Chili Powder, and Paprika. Sitr occasionally for 5 minutes.</li>
+    <li>Drain out Tomato cans. Put Diced Tomoatos into pan. Stir occasionally for 3 minutes. Place onto plate and let cool for 1 minute. Add salt and pepper (optional) and enjoy!</li>
+  </ol>
+  </nav>
+
+    <nav class="bigtext">
+    <h1>Total Cost:</h1>
+    <h1 id="cost">cost</h1>
+  </nav>
+  <script>
+    const prices = [
+  ["hominey", 3.70],
+  ["tomato", 3.36],
+  ["hamburger", 7.23],
+  ["onionPep", 2.84],
+  ["chili powder", 1.08],
+  ["paprika", 1.08]
+];
+const totalValue = prices.reduce((sum, item) => sum + item[1], 0);
+
+document.getElementById("cost").textContent = "~$" + totalValue;
+  </script>
+
+<footer>
+ <h3>Questions? Reach out at "benthebrownviola@gmail.com"</h3></footer>
+    </body>
+</html>

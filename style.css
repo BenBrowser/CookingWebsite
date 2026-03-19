@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+header {
+    font-family: Playpen Sans;
+    text-anchor: start;
+    font-size: 25px;
+    background-color: #ed9dfc;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+text-decoration: none;
+}
+
+
+#logo {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-image: linear-gradient( #c4e4ff,#ed9dfc);
+padding: 20px;
+}
+
+.title {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-image: linear-gradient( #c4e4ff,#ed9dfc);
+padding: 50px;
+font-size: 30px;
+}
+
+body {
+    font-family: Playpen Sans;
+    background-color: #ed9dfc;
+}
+
+.bigtext {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+hr {
+    background-color: #04aa86;
+    height: 4px;
+    border: none;
+    max-width: 900px;
+}
+
+p {
+    font-size: 25px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+button {
+background-color: #04aa86;
+border: 3px solid black;
+border-radius: 10px; 
+color: white;
+padding: 15px 32px;
+font-size: 16px;
+font-family: Playpen Sans;
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+
+button:hover {
+  background-color: rgb(8, 122, 56);
+  transform: scale(1.1);
+}
+
+.disabledButton {
+    background-color: #868d97;
+}
+
+button.disabledButton:hover {
+  background-color: #70728b;
+  transform: none;
+  cursor: not-allowed;
+  transform: scale(1.1);
+}
+
+
+.centerbutton {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+gap: 30px;
+padding: 20px;
+}
+
+table {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+gap: 30px;
+padding: 40px;
+font-size: 30px;
+text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #e2a4ff;
+}
+
+tr:nth-child(odd) {
+  background-color: #aceafa;
+}
+
+.directions {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px;
+font-size: 20px;
+text-align: center;
+}
+
+.imageText {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 20px;
+font-size: 30px;
+text-align: center;
+}
+
+footer {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 10px;
+font-size: 15px;
+}
+
+input {
+    background-color: #e8ecf3;
+border: 3px solid black;
+border-radius: 10px; 
+color: rgb(0, 0, 0);
+margin-left: 20px;
+padding: 15px 32px;
+font-size: 16px;
+font-family: Playpen Sans;
+cursor: text;
+transition: transform 0.2s ease;  
+text-align: center;
+}
+
+input:hover {
+  background-color: rgb(190, 193, 196);
+  transform: scale(1.1);
+}

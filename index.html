@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+               <title>Cookie Apothecary</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    </head> 
+            <header>
+            <nav>
+            <ul>
+                <li><a href="/index.html"><img src="images/logo.png" height = 100x></a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/recipies.html">Recipes</a></li>
+            </ul>
+        </nav>
+            </header>
+    <body>
+<main>
+    <section>
+        <div id = "logo">
+           <img src="images/logo.png" height = 300px>
+        </div>
+        <div class = "bigtext">
+        <h1>Jump into the Recipe Book!</h1>
+        </div>
+        <div class="centerbutton">
+            <a href="/recipies.html">
+        <button>Recipes</button>
+        </a>
+        </div>
+    </section>
+    <hr>
+      <p>Step into the generational recipe book, where long-standing recipes continue being shared.</p>
+      <br>
+      <p>A variety of different types of food, ranging from Spaghetti to more niche meals such as Hominy Hot Pot!</p>
+<hr>
+    <p>Want to learn more about the creator? Check out the About Me!</p>
+            <div class="centerbutton">
+            <a href="/about.html">
+        <button>About Me</button>
+        </a>
+        </div>
+<hr>
+
+        <!-- JavaScript -->
+       <p>Enter your email to recieve updates when a new recipe is added!</p>
+           <br>
+           <nav class = "centerbutton">
+           <input id="userInput"> <br><br>
+           </nav>
+           <nav class = "centerbutton">
+           <button onclick="myFunction()">Submit</button>
+           </nav>
+           <p id="message"></p>
+           <script>function myFunction() {
+           let userInput = document.querySelector ("#userInput");
+           let message = document.querySelector ("#message");
+           message.innerHTML = "Thank you for signing up, " + userInput.value +"!";
+           }
+           </script>
+
+
+<footer>
+ <h3>Questions? Reach out at "benthebrownviola@gmail.com"</h3></footer>
+    </body>
+</html>
+
+</html>
