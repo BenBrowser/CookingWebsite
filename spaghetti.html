@@ -1,24 +1,49 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-               <title>Cookie Apothecary</title>
-            <link rel="stylesheet" href="style.css">
-            <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    </head> 
-            <header>
-            <nav>
-            <ul>
-                <li><a href="index.html"><img src="images/logo.png" height = 100x></a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="recipies.html">Recipes</a></li>
-            </ul>
-        </nav>
-            </header>
-    <body>
-<main>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bakery Delight</title>
+    <link rel="stylesheet" href="materialize.css">
+    <link rel="stylesheet" href="style.css">
+   <style>
+   
+        #navbar {
+           background-color: #ac5372; /* Light pink background */
+        }
+       .header-bg {
+           background-color: #f8bbd0; /* Light pink background */
+       }
+       .section-bg {
+           background-color: #420727; /* Light orange background */
+       }
+       .shadow {
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       }
+       .table-header {
+           background-color: #ffab91; /* Light red background */
+       }
+   </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav id="navbar">
+       <div class="nav-wrapper">
+        
+<ul>
+   <li><a href="index.html">Home</a></li>
+   <li> <a href="about.html">About</a></li>
+  <li> <a href="recipies.html">Recipes</a></li>        
+  <li> <a href="materialize.html">Materialize</a></li>       
+           </ul>
+       </div>
+   </div>
+   </nav>
+   </nav>
+
+    <div class="section header-bg">
+
     <section>
         <div class = "title">
            <h1>Spaghetti</h1>
@@ -26,9 +51,9 @@
         </div>
     </section>
 <hr>
-<p>Spaghetti is one of Ben's favorite foods in the world! So, spaghetti is his most consistent, delicious food out of his recipe book. This will surely be one to keep in your back pocket at a moments notice!</p>
+<h5>Spaghetti is one of Ben's favorite foods in the world! So, spaghetti is his most consistent, delicious food out of his recipe book. This will surely be one to keep in your back pocket at a moments notice!</h5>
 <br>
-<p>Preperation Time: 30 Minutes</p>
+<h5>Preperation Time: 30 Minutes</h5>
 <hr>
 
 <h1 style="margin: 0 auto; text-align: center; padding-top: 20px;">Ingredients</h1>
@@ -39,7 +64,7 @@
       <td style="border: 3px, solid, black;"><b>10 cups Water</b></td>
     </tr>
     <tr>
-      <td style="border: 3px, solid, black;"><b><a href="https://www.ragu.com/our-sauces/chunky-sauces/garden-combination-tomato-sauce/">Ragu Garden Blend Sauce</a></b></td>
+      <td style="border: 3px, solid, black;"><b><u><a href="https://www.ragu.com/our-sauces/chunky-sauces/garden-combination-tomato-sauce/">Ragu Garden Blend Sauce</a></u></b></td>
       <td style="border: 3px, solid, black;"><b>1tsp Italian Seasoning</b></td>
       <td style="border: 3px, solid, black;"><b>1tsp Basil</b></td>
     </tr>
@@ -54,19 +79,19 @@
 
   <h1 style="margin: 0 auto; text-align: center; padding-top: 20px;">Directions</h1>
   
-  <nav class = "directions">
+  <div class = "directions">
   <ol>
     <li>Pour 10 cups of water into a large pot. Bring to a roiling boil. Pour spaghetti noodles into pot and stir occasionally for ~9 minutes (The time will depend upon what the pack of noodles you bought specifcially state)</li>
     <li>While the water is boiling, heat up non-frozen meat for 3 minutes in microwave (If frozen, heat for 5), covered. After first heating, chop up the meat. Put back in microwave for 3 minutes.</li>
     <li>Take out the meat and dump grease. Add Ragu "Garden Blend", Italian Seasoning, Oregano, Sea Salt Garlic, Basil, and Chopped Onions into meat. Heat for 2 more minutes.</li>
     <li>By now, the meat should be finished and you're just waiting for the noodles to finish up. Once noodles are finished cooking, dump out the water using a strainer. Put the Noodles and the Sauce on the plate together, and you have yourself a delicious meal!</li>
   </ol>
-  </nav>
+</div>
 
-  <nav class="bigtext">
-    <h1>Total Cost:</h1>
-    <h1 id="cost">cost</h1>
-  </nav>
+  <div class="bigtext">
+    <h3>Total Cost:</h3>
+    <h4 id="cost">cost</h4>
+  </div>
   <script>
     const prices = [
   ["noodles", 1.84],
@@ -82,7 +107,19 @@ const totalValue = prices.reduce((sum, item) => sum + item[1], 0);
 document.getElementById("cost").textContent = "~$" + totalValue;
   </script>
 
-<footer>
- <h3>Questions? Reach out at "benthebrownviola@gmail.com"</h3></footer>
+</div>
+
+        <hr>
+    
+   <footer>
+    <div class="center-align">
+    <p class="black-text">Questions? Reach out at "benthebrownviola@gmail.com"</p>
+    <p class="black-text">&copy; 2026 Benjamin Brown. All rights reserved.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+
     </body>
 </html>

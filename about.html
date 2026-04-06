@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-               <title>Cookie Apothecary</title>
-            <link rel="stylesheet" href="style.css">
-            <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    </head> 
-            <header>
-            <nav>
-            <ul>
-                <li><a href="/CookingWebsite/index.html"><img src="images/logo.png" height = 100x></a></li>
-                <li><a href="/CookingWebsite/index.html">Home</a></li>
-                <li><a href="/CookingWebsite/about.html">About</a></li>
-                <li><a href="/CookingWebsite/recipies.html">Recipes</a></li>
-            </ul>
-        </nav>
-            </header>
-    <body>
-<main>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bakery Delight</title>
+    <link rel="stylesheet" href="materialize.css">
+    <link rel="stylesheet" href="style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+   <style>
+
+        #navbar {
+           background-color: #ac5372; /* Light pink background */
+        }
+       .header-bg {
+           background-color: #f8bbd0; /* Light pink background */
+       }
+       .section-bg {
+           background-color: #420727; /* Light orange background */
+       }
+       .shadow {
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       }
+       .table-header {
+           background-color: #ffab91; /* Light red background */
+       }
+   </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav id="navbar">
+       <div class="nav-wrapper">
+        
+<ul>
+   <li><a href="index.html">Home</a></li>
+   <li> <a href="about.html">About</a></li>
+  <li> <a href="recipies.html">Recipes</a></li>        
+  <li> <a href="materialize.html">Materialize</a></li>       
+           </ul>
+       </div>
+   </div>
+   </nav>
+
+   <div class="section header-bg">
     <section>
+        
         <div class = "title">
            <h1>About</h1>
         </div>
-        <div class = "bigtext">
-        <h1>Family Recipes that continue on</h1></div>
+        <div class = "center-align">
+        <h1 style="font-size: 40px; margin-top: -20px;">Family Recipes that continue on</h1></div>
+        <hr>
     </section>
     <div class="imageText">
     <img src="images/Ben.jpg" style = "max-width: 300px; border-radius: 20px; border: 4px solid black;">
@@ -35,9 +61,32 @@
       <p><i>*Recipes here are only ones that are fan favorites of Ben, so unfortunately we are not taking any suggestions/recipes. We hope you enjoy the recipes provided on the website, however!</i></p>
 <hr>
 
+<div class="section section-bg">
+    <div class="white-text">
+        <div class = "center-align">
+        <h1 style="font-size: 50px;">Other Projects</h1>
+        <h2 style="font-size: 30px;">Greeny the Blox</h2>
+        </div>
+                 <div class="video-container iframe">
+        <iframe width="853.33333333333" height="480" src="https://www.youtube.com/embed/Ql9e3VjCMDA?si=3BJUartgaMewjlvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+        </div>
+</div>
 
-<footer>
- <h3>Questions? Reach out at "benthebrownviola@gmail.com"</h3></footer>
+</div>
+
+        <hr>
+    
+   <footer>
+    <div class="center-align">
+    <p class="black-text">Questions? Reach out at "benthebrownviola@gmail.com"</p>
+    <p class="black-text">&copy; 2026 Benjamin Brown. All rights reserved.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+
     </body>
 </html>
 

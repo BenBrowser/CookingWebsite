@@ -5,14 +5,14 @@ header {
     font-family: Playpen Sans;
     text-anchor: start;
     font-size: 25px;
-    background-color: #ed9dfc;
+    
 }
 
 nav ul {
     display: flex;
     align-items: center;
     list-style-type: none;
-    gap: 2em;
+    gap: 1em;
 }
 
 
@@ -34,7 +34,6 @@ text-decoration: none;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-image: linear-gradient( #c4e4ff,#ed9dfc);
 padding: 20px;
 }
 
@@ -42,14 +41,12 @@ padding: 20px;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-image: linear-gradient( #c4e4ff,#ed9dfc);
 padding: 50px;
 font-size: 30px;
 }
 
 body {
     font-family: Playpen Sans;
-    background-color: #ed9dfc;
 }
 
 .bigtext {
@@ -65,8 +62,7 @@ hr {
     max-width: 900px;
 }
 
-p {
-    font-size: 25px;
+p, h5 {
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
@@ -154,7 +150,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding-top: 10px;
-font-size: 15px;
 }
 
 input {
@@ -174,4 +169,19 @@ text-align: center;
 input:hover {
   background-color: rgb(190, 193, 196);
   transform: scale(1.1);
+}
+
+.videosize {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+.centerImg {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px;
 }

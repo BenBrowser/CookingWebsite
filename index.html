@@ -1,59 +1,84 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-               <title>Cookie Apothecary</title>
-            <link rel="stylesheet" href="style.css">
-            <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    </head> 
-            <header>
-            <nav>
-            <ul>
-                <li><a href="index"><img src="images/logo.png" height = 100x></a></li>
-                <li><a href="index">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="recipies">Recipes</a></li>
-            </ul>
-        </nav>
-            </header>
-    <body>
-<main>
-    <section>
-        <div id = "logo">
-           <img src="images/logo.png" height = 300px>
-        </div>
-        <div class = "bigtext">
-        <h1>Jump into the Recipe Book!</h1>
-        </div>
-        <div class="centerbutton">
-            <a href="/CookingWebsite/recipies.html">
-        <button>Recipes</button>
-        </a>
-        </div>
-    </section>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bakery Delight</title>
+    <link rel="stylesheet" href="materialize.css">
+    <link rel="stylesheet" href="style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+   <style>
+
+        #navbar {
+           background-color: #ac5372; /* Light pink background */
+        }
+       .header-bg {
+           background-color: #f8bbd0; /* Light pink background */
+       }
+       .section-bg {
+           background-color: #420727; /* Light orange background */
+       }
+       .shadow {
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       }
+       .table-header {
+           background-color: #ffab91; /* Light red background */
+       }
+   </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav id="navbar">
+       <div class="nav-wrapper">
+        
+<ul>
+   <li><a href="index.html">Home</a></li>
+   <li> <a href="about.html">About</a></li>
+  <li> <a href="recipies.html">Recipes</a></li>        
+  <li> <a href="materialize.html">Materialize</a></li>       
+           </ul>
+       </div>
+   </div>
+   </nav>
+
+   <div class="section header-bg">
+   
+   <!-- Header Section -->
+   <div class="center-align">
+    <img src="images/logo.png" height = 350px width = 350px class="responsive-img">
+   </div>
+
     <hr>
-      <p>Step into the generational recipe book, where long-standing recipes continue being shared.</p>
+
+    <div class="center-align" style="padding-bottom: 10px;">
+      <h5>Step into the generational recipe book, where long-standing recipes continue being shared.</h5>
       <br>
-      <p>A variety of different types of food, ranging from Spaghetti to more niche meals such as Hominy Hot Pot!</p>
+      <h5>A variety of different types of food, ranging from Spaghetti to more niche meals such as Hominy Hot Pot!</h5>
+    </div>
+
 <hr>
-    <p>Want to learn more about the creator? Check out the About Me!</p>
+    <div class="center-align" style="padding-bottom: 10px;">
+    <h5>Want to learn more about the creator? Check out the About Me!</h5>
             <div class="centerbutton">
-            <a href="/CookingWebsite/about.html">
+            <a href="about.html">
         <button>About Me</button>
         </a>
+        </div>
         </div>
 <hr>
 
         <!-- JavaScript -->
-       <p>Enter your email to recieve updates when a new recipe is added!</p>
+       <h5>Enter your email to recieve updates when a new recipe is added!</h5>
            <br>
-           <nav class = "centerbutton">
-           <input id="userInput"> <br><br>
-           </nav>
-           <nav class = "centerbutton">
+           <div style="background-color: rgb(172, 172, 172);">
+             <input id="userInput"> 
+           </div>
+
+           <div class = "centerbutton">
            <button onclick="myFunction()">Submit</button>
-           </nav>
+           </div>
+
            <p id="message"></p>
            <script>function myFunction() {
            let userInput = document.querySelector ("#userInput");
@@ -62,9 +87,19 @@
            }
            </script>
 
+</div>
 
-<footer>
- <h3>Questions? Reach out at "benthebrownviola@gmail.com"</h3></footer>
+    <hr>
+
+   <footer>
+    <div class="center-align">
+    <p class="black-text">Questions? Reach out at "benthebrownviola@gmail.com"</p>
+    <p class="black-text">&copy; 2026 Benjamin Brown. All rights reserved.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
     </body>
 </html>
 

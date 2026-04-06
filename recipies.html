@@ -1,48 +1,83 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-               <title>Cookie Apothecary</title>
-            <link rel="stylesheet" href="style.css">
-            <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    </head> 
-            <header>
-            <nav>
-            <ul>
-                <li><a href="index.html"><img src="images/logo.png" height = 100x></a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="recipies.html">Recipes</a></li>
-            </ul>
-        </nav>
-            </header>
-    <body>
-<main>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bakery Delight</title>
+    <link rel="stylesheet" href="materialize.css">
+    <link rel="stylesheet" href="style.css">
+   <style>
+   
+        #navbar {
+           background-color: #ac5372; /* Light pink background */
+        }
+       .header-bg {
+           background-color: #f8bbd0; /* Light pink background */
+       }
+       .section-bg {
+           background-color: #420727; /* Light orange background */
+       }
+       .shadow {
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       }
+       .table-header {
+           background-color: #ffab91; /* Light red background */
+       }
+   </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav id="navbar">
+       <div class="nav-wrapper">
+        
+<ul>
+   <li><a href="index.html">Home</a></li>
+   <li> <a href="about.html">About</a></li>
+  <li> <a href="recipies.html">Recipes</a></li>        
+  <li> <a href="materialize.html">Materialize</a></li>       
+           </ul>
+       </div>
+   </div>
+   </nav>
+   </nav>
+
+ <div class="section header-bg">
     <section>
+        
         <div class = "title">
            <h1>Recipes</h1>
         </div>
-        <div class = "bigtext">
-        <h1>A variety of foods to choose from</h1>
-        <h2>Choose from the selection of family recipes. More may be added in the future!</h2>
+        <div class = "center-align">
+        <h1 style="font-size: 40px; margin-top: -20px;">A variety to choose from</h1>
+    <hr>
+        <h2 style="font-size: 20px; margin-top: 20px;">Choose from the selection of family recipes. More may be added in the future!</h2>
         </div>
-        <div class="centerbutton">
-            <a href="spaghetti.html"> <button>Spaghetti</button> </a>
-            <a href="hominy.html"> <button>Hominy Hot Pot</button> </a>
-            <button disabled class="disabledButton">Tacos</button> </a>
-            <button disabled class="disabledButton">Chili</button> </a>
-            <button disabled class="disabledButton">Beef Stew</button> </a>
+        </section>
+        <div class="centerbutton" style="padding-bottom: 4%; margin-top: 4%;">
+            <a href="/spaghetti.html"> <button>Spaghetti</button> </a>
+            <a href="/hominy.html"> <button>Hominy Hot Pot</button> </a>
+            <a href="/recipies.html" > <button disabled class="disabledButton">Tacos</button> </a>
+            <a href="/recipies.html"> <button disabled class="disabledButton">Chili</button> </a>
+            <a href="/recipies.html"> <button disabled class="disabledButton">Beef Stew</button> </a>
         </div>
     </section>
-     
+</div>
 
    </main>
 
     <hr>
-   
-<footer>
- <h3>Questions? Reach out at "benthebrownviola@gmail.com"</h3></footer>
+
+    
+   <footer>
+    <div class="center-align">
+    <p class="black-text">Questions? Reach out at "benthebrownviola@gmail.com"</p>
+    <p class="black-text">&copy; 2026 Benjamin Brown. All rights reserved.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
     </body>
 </html>
 
