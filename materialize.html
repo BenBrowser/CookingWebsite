@@ -23,6 +23,25 @@
        .table-header {
            background-color: #ffab91; /* Light red background */
        }
+        
+       img.grayscale {
+            filter: grayscale(100%); /* 100% = fully grayscale */
+            -webkit-filter: grayscale(100%); /* For older Safari */
+            transition: filter 0.3s ease; /* Smooth transition */
+        }
+
+
+        
+        .carousel .carousel-item:hover {
+            outline: 4px solid rgb(8, 122, 56);
+            outline-offset: 4px;
+            transition: outline 0.2s ease;
+        }
+
+        .carousel .carousel-item img {
+            border-radius: 15px;
+        }   
+
    </style>
 </head>
 <body>
@@ -49,30 +68,40 @@
     <h1>Cooking with Ben</h1>
    </div>
 
-
-   <!-- Chef's Favorites Section -->
+   <!-- BASIC CAROUSEL -->
+    <section class="section section-bg">
     <div class="center-align">
     <div class="white-text">
-    <div class=" section section-bg">
     <div class="container">
     <h2>Chef's Favorites</h2>
     </div>
-    <div class="row">
-
-       <div class="col a12 m6">
-           <a href="spaghetti.html"><img src="images/spaghetti.png" alt="Bakery Image" class="responsive-img shadow circle" height="400px" width="400px"></a>
-           <p>Spaghetti</p>
-       </div>
-       <div class="col a12 m6"">
-           <a href="hominy.html"><img src="images/hominy.jpg" alt="Bakery Image" class="responsive-img shadow circle height="300px" width="400px"></a>
-           <p>Hominy Hotpot</p>
-        </div>
     </div>
     </div>
 
 
+      <div class="controls">
+        <div class="centerbutton">
+        <button id="basicPrev" class="btn waves-effect">Prev</button>
+        <button id="basicNext" class="btn waves-effect">Next</button>
+      </div>
+      </div>
 
- <!-- About Us Section -->
+      <div class="carousel" id="basicCarousel">
+        <a class="carousel-item" href="hominy.html">
+          <img alt="Hominy" src="images/hominy.png" />
+        </a>
+        <a class="carousel-item" href="spaghetti.html">
+          <img alt="Spaghetti" src="images/spaghetti.png" />
+        </a>
+        <a class="carousel-item">
+          <img alt="Nature 3" src="images/taco.png" class="grayscale"/>
+        </a>
+      </div>
+    </section>
+
+
+
+ <!-- About Me Section -->
     <div class="black-text">
    <div class="section header-bg">
        <div class="container">
@@ -104,5 +133,70 @@
     </div>
     </div>
    </footer>
+
+
+
+     <!-- Materialize JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // =========================
+      // Basic carousel init
+      // =========================
+      const basicElem = document.querySelector('#basicCarousel');
+      const basicInstance = M.Carousel.init(basicElem, {
+        duration: 200,
+        dist: -100,
+        shift: 0,
+        padding: 0,
+        numVisible: 5,
+        indicators: false
+      });
+
+
+      document.querySelector('#basicPrev').addEventListener('click', () => basicInstance.prev());
+      document.querySelector('#basicNext').addEventListener('click', () => basicInstance.next());
+      document.querySelector('#basicGo3').addEventListener('click', () => basicInstance.set(2)); // 0-based index
+
+      // =========================
+      // Full-width carousel-slider init
+      // =========================
+      const fwElem = document.querySelector('#fullWidthCarousel');
+      const fwInstance = M.Carousel.init(fwElem, {
+        fullWidth: true,
+        indicators: true
+      });
+
+
+      document.querySelector('#fwPrev').addEventListener('click', () => fwInstance.prev());
+      document.querySelector('#fwNext').addEventListener('click', () => fwInstance.next());
+
+
+      // Optional autoplay for full-width
+      let autoplayOn = false;
+      let autoplayTimer = null;
+
+
+      function startAutoplay() {
+        autoplayTimer = setInterval(() => fwInstance.next(), 3000);
+        autoplayOn = true;
+      }
+      function stopAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+        autoplayOn = false;
+      }
+
+
+      document.querySelector('#fwToggle').addEventListener('click', () => {
+        if (autoplayOn) stopAutoplay();
+        else startAutoplay();
+      });
+    });
+  </script>
+  
 </body>
 </html>
+
+

@@ -118,7 +118,7 @@ text-align: center;
 }
 
 tr:nth-child(even) {
-  background-color: #e2a4ff;
+  background-color: #fdf9ff;
 }
 
 tr:nth-child(odd) {

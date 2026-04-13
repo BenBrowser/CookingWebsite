@@ -6,6 +6,7 @@
    <title>Bakery Delight</title>
     <link rel="stylesheet" href="materialize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
    <style>
    
         #navbar {
@@ -42,6 +43,9 @@
    </nav>
    </nav>
 
+
+   
+
     <div class="section header-bg">
 
     <section>
@@ -52,9 +56,22 @@
     </section>
 <hr>
 <h5>Spaghetti is one of Ben's favorite foods in the world! So, spaghetti is his most consistent, delicious food out of his recipe book. This will surely be one to keep in your back pocket at a moments notice!</h5>
-<br>
-<h5>Preperation Time: 30 Minutes</h5>
 <hr>
+
+<section class="container">
+<ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">alarm</i>Preperation Time</div>
+      <div class="collapsible-body"><span>~30 minutes. Usually depends upon how long water takes to boil and how long noodles take to cook.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">dining</i>Health Benefits</div>
+      <div class="collapsible-body"><span>Noodles provde a healthy amount of carbs to your diet. The tomato sauce adds in your vegetable intake. The meat (depending on the amount of leaness) can be very helpful for your protien intake.</span></div>
+    </li>
+  </ul>
+  </section>
+
+  <hr>
 
 <h1 style="margin: 0 auto; text-align: center; padding-top: 20px;">Ingredients</h1>
  <table>
@@ -107,6 +124,8 @@ const totalValue = prices.reduce((sum, item) => sum + item[1], 0);
 document.getElementById("cost").textContent = "~$" + totalValue;
   </script>
 
+
+
 </div>
 
         <hr>
@@ -120,6 +139,19 @@ document.getElementById("cost").textContent = "~$" + totalValue;
     </div>
     </div>
     </footer>
+
+
+<!-- Materialize JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var collapse=document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapse);
+  });
+    </script>
+
+
 
     </body>
 </html>

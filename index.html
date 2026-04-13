@@ -68,24 +68,23 @@
         </div>
 <hr>
 
-        <!-- JavaScript -->
-       <h5>Enter your email to recieve updates when a new recipe is added!</h5>
-           <br>
-           <div style="background-color: rgb(172, 172, 172);">
-             <input id="userInput"> 
+       <!-- Email Feedback Section -->
+   <div id="feedback-section" class="section container">
+    <div class="center-align">
+       <h2>Subscribe for Updates</h2>
+    </div>
+       <form onsubmit="submitEmail(event)">
+           <div class="input-field">
+               <input id="email" type="email" required>
+               <label for="email">Email</label>
            </div>
-
-           <div class = "centerbutton">
-           <button onclick="myFunction()">Submit</button>
+           <div class="centerbutton">
+           <button type="submit">Subscribe</button>
            </div>
+       </form>
+       <div id="email-response"></div>
+   </div>
 
-           <p id="message"></p>
-           <script>function myFunction() {
-           let userInput = document.querySelector ("#userInput");
-           let message = document.querySelector ("#message");
-           message.innerHTML = "Thank you for signing up, " + userInput.value +"!";
-           }
-           </script>
 
 </div>
 
@@ -101,6 +100,30 @@
     </div>
     </footer>
     </body>
+
+    
+
+ <!-- Materialize JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+  <script>
+       // Function to handle email subscription form submission
+       function submitEmail(event) {
+           event.preventDefault();
+           const email = document.getElementById('email').value;
+           document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+           document.getElementById('email').value = ''; // Clear the input
+       }
+
+            // Display modal
+           const modalText = document.getElementById('modal-content-text');
+           modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+           const modal = M.Modal.getInstance(document.getElementById('modal1'));
+           modal.open();
+   </script>
+
+
 </html>
 
 </html>

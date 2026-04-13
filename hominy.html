@@ -6,6 +6,7 @@
    <title>Bakery Delight</title>
     <link rel="stylesheet" href="materialize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
    <style>
    
         #navbar {
@@ -46,16 +47,25 @@
     <section>
         <div class = "title">
            <h1>Hominy Hot Pot</h1>
-           <img src="images/hominy.jpg" style = "max-width: 400px; border-radius: 20px; border: 4px solid black;">
+           <img src="images/hominy.png" style = "max-width: 400px; border-radius: 20px; border: 4px solid black;">
         </div>
     </section>
 <hr>
 <h5>Hominy Hot Pot is a recipe created by Bush's, however it seems to have been mostly lost to time... Thankfully, Ben's family kept the recipe alive, and now it's available for your cooking and dining pleasure!</h5>
-<br>
-<br>
-
-<h5>Preperation Time: 30 Minutes</h5>
 <hr>
+<section class="container">
+<ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">alarm</i>Preperation Time</div>
+      <div class="collapsible-body"><span>~30 minutes. Depends on how cooked you want your tomatoes to be.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">dining</i>Health Benefits</div>
+      <div class="collapsible-body"><span>The tomatos, hominy, peppers, and onions adds in your vegetable intake. The meat (depending on the amount of leaness) can be very helpful for your protien intake.</span></div>
+    </li>
+  </ul>
+  </section>
+  <hr>
 <h1 style="margin: 0 auto; text-align: center; padding-top: 20px;">Ingredients</h1>
  <table>
     <tr style="border: 3px, solid, black;">
@@ -115,6 +125,15 @@ document.getElementById("cost").textContent = "~$" + totalValue;
     </div>
     </footer>
 
+    <!-- Materialize JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var collapse=document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapse);
+  });
+    </script>
 
     </body>
 </html>
