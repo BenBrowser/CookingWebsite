@@ -6,22 +6,41 @@
    <title>Bakery Delight</title>
     <link rel="stylesheet" href="materialize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
    <style>
-   
+    :root{
+        --bg-navbar-color:#ac5372;
+        --bg-color: #f8bbd0;
+        --bg-section-color:#420727;
+        --bg-table-header-color: #ffab91;
+        --black-text: black;
+    }
+          
+    .dark {
+    background: black;
+    color: white;
+        --black-text: white;
+        --bg-navbar-color:#420727;
+        --bg-color: #ac5372;
+        --bg-section-color:#420727;
+        --bg-table-header-color: #da795b;
+    }
+
         #navbar {
-           background-color: #ac5372; /* Light pink background */
+           background-color: var(--bg-navbar-color); /* Light pink background */
         }
        .header-bg {
-           background-color: #f8bbd0; /* Light pink background */
+           background-color: var(--bg-color); /* Light pink background */
        }
        .section-bg {
-           background-color: #420727; /* Light orange background */
+           background-color: var(--bg-section-color); /* Light orange background */
        }
        .shadow {
            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
        }
        .table-header {
-           background-color: #ffab91; /* Light red background */
+           background-color: var(--bg-table-header-color); /* Light red background */
        }
         
        img.grayscale {
@@ -29,22 +48,68 @@
             -webkit-filter: grayscale(100%); /* For older Safari */
             transition: filter 0.3s ease; /* Smooth transition */
         }
+        .text-black {
+           color: var(--black-text); /* Black Text*/
+       }
+       
 
 
         
-        .carousel .carousel-item:hover {
+        .item:hover {
             outline: 4px solid rgb(8, 122, 56);
             outline-offset: 4px;
             transition: outline 0.2s ease;
         }
 
-        .carousel .carousel-item img {
+        .item img {
             border-radius: 15px;
         }   
 
+        #panel{
+
+            display: none;
+        }
+        
+        #carousel{
+
+            display: none;
+        }
+
    </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<script> 
+$(document).ready(function(){
+  $("#fade").click(function(){
+    $("#carousel").fadeToggle("slow");
+  });
+});
+</script>
+<script> 
+  $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+</script>
+<script> 
+$(document).ready(function(){
+  $("#darkModeBtn").click(function() {
+    return $("body").toggleClass("dark");
+  });
+});
+</script>
 </head>
 <body>
+
+    <div class="fixed-action-btn">
+<button id="darkModeBtn">Dark Mode</button>
+</div>
 
    <!-- Navbar -->
    <nav id="navbar">
@@ -69,71 +134,78 @@
     <h1>Cooking with Ben</h1>
    </div>
 
-   <!-- BASIC CAROUSEL -->
-    <section class="section section-bg">
-    <div class="center-align">
-    <div class="white-text">
-    <div class="container">
-    <h2>Chef's Favorites</h2>
-    </div>
-    </div>
-    </div>
-
-
-      <div class="controls">
-        <div class="centerbutton">
-        <button id="basicPrev" class="btn waves-effect">Prev</button>
-        <button id="basicNext" class="btn waves-effect">Next</button>
-      </div>
-      </div>
-
-      <div class="carousel" id="basicCarousel">
-        <a class="carousel-item" href="hominy.html">
-          <img alt="Hominy" src="images/hominy.png" />
-        </a>
-        <a class="carousel-item" href="spaghetti.html">
-          <img alt="Spaghetti" src="images/spaghetti.png" />
-        </a>
-        <a class="carousel-item">
-          <img alt="Nature 3" src="images/taco.png" class="grayscale"/>
-        </a>
-      </div>
-    </section>
-
-
-
  <!-- About Me Section -->
-    <div class="black-text">
-   <div class="section header-bg">
+    <div class="white-text">
+   <div class="section section-bg">
        <div class="container">
            <div class="row">
-               <div class="col s12 m6">
+               
                 
-              
-                   <h2>About Me</h2>
+                
+              <div id="flip">
+                   <button>About Me</button>
+                   </div>
+                   
+
+                   <div id="panel">
+                    <br>
                    <h5>I'm Benjamin, a young programmer and musician that enjoys cooking! This website provides recipes that my family have been making for decades that I wanted to share with the world.</h5>
                     <br>
                    <h5>Cooking had been an integral part of my life for years as my mom would always ask him to help with dinner, causing me to learn about my families recipes from over generations.</h5>
-                </div>
                <div class="col s8 m4">
                    <img src="images/Ben.jpg" alt="Image of Ben" class="responsive-img shadow">
+                  
                    </div>
                </div>
            </div>
        </div>
-   </div>
 
     <hr>
+
+      <!-- BASIC CAROUSEL -->
+    <section class="section section-bg">
+    <div class="white-text">
+    <div class="container">
+    <div id="fade">
+    <button>Chef's Favorites</button>
+    </div>
+    </div>
+
+ <div id="carousel">
+     <!-- Chef's Favorites Section -->
+    <div class="center-align">
+    <div class="white-text">
+    <div class=" section section-bg">
+    <div class="container">
+    <h2>Chef's Favorites</h2>
+    </div>
+    <div class="row">
+
+       <div class="col a12 m6">
+           <a href="spaghetti.html"><img src="images/spaghetti.png" alt="Bakery Image" class="responsive-img shadow circle item" height="400px" width="400px"></a>
+           <p>Spaghetti</p>
+       </div>
+       <div class="col a12 m6"">
+           <a href="hominy.html"><img src="images/hominy.png" alt="Bakery Image" class="responsive-img shadow circle item" height="300px" width="400px"></a>
+           <p>Hominy Hotpot</p>
+        </div>
+    </div>
+    </div>
+    </section>
+        </div>
+    <hr>
+    
 
    <!-- Footer -->
    <footer>
     <div class="center-align">
-    <p class="black-text">Questions? Reach out at "benthebrownviola@gmail.com"</p>
-    <p class="black-text">&copy; 2026 Benjamin Brown. All rights reserved.</p>
+    <p class="text-black">Questions? Reach out at "benthebrownviola@gmail.com"</p>
+    <p class="text-black">&copy; 2026 Benjamin Brown. All rights reserved.</p>
     </div>
     </div>
     </div>
    </footer>
+
 
 
 
