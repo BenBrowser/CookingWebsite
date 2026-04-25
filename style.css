@@ -166,10 +166,7 @@ transition: transform 0.2s ease;
 text-align: center;
 }
 
-input:hover {
-  background-color: rgb(190, 193, 196);
-  transform: scale(1.1);
-}
+
 
 .videosize {
 display: flex;
